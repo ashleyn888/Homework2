@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>A Simple Scene</title>
+         <script src= "https://aframe.io/releases/1.7.0/aframe.min.js">
+          </script>
+          </head>
+          <body>
+             <a-scene>
+                <a-box
+                color="red"
+                position="-5 5 -8"
+                rotation="0 45 0"
+                width="2"
+                height="2"
+                depth="2">
+            </a-box>
+            <a-sphere
+            color="green"
+            position="0 5 -8"
+            radius="1.5">
+        </a-sphere>
+        <a-cylinder
+        color="blue"
+        position="5 5 -8"
+        rotation="45 0 0"
+        radius="1"
+        height="3">
+    </a-cylinder>
+    <a-cone
+    color="yellow"
+    position="-5 0 -8"
+    rotation="-45 0 0"
+    radius-bottom="0.75"
+    height="3">
+</a-cone>
+<a-plane
+color="black"
+position="8 .01 -9"
+rotation="-90 0 0"
+width="4"
+height="4">
+</a-plane>
+<a-text
+value="Hospital"
+color="black"
+position="1 2 -5.5"
+width="20">
+</a-text>
+                 <a-plane 
+                 color="forestgreen" 
+                 position="0 0 0" 
+                 rotation="-90 0 0"
+                  width="500"
+                  height="500" > 
+                </a-plane>
+                 <a-sky
+                  color="lightskyblue" >
+                 </a-sky>
+                 <a-mixin
+                 id="wallcolor"
+                 color="lightsteelblue">
+                </a-mixin>
+                <a-box
+                mixin="wallcolor"
+                position="0 1.5 -16"
+                rotation="0 0 0"
+                width="10"
+                height="3"
+                depth="0.1">
+            </a-box>
+            <a-box
+            mixin="wallcolor"
+            position="-5 1.5 -11"
+            rotation="0 90 0"
+            width="10"
+            height="3"
+            depth="0.1">
+        </a-box>
+        <a-box
+        mixin="wallcolor"
+        position="5 1.5 -11"
+        rotation="0 90 0"
+        width="10"
+        height="3"
+        depth="0.1">
+    </a-box>
+    <a-box
+    mixin="wallcolor"
+    position="-2.875 1.5 -6"r
+    otation="0 0 0"
+    width="4.25"
+    height="3"
+    depth="0.1">
+</a-box>
+<a-box
+mixin="wallcolor"
+position="2.875 1.5 -6"
+rotation="0 0 0"
+width="4.25"
+height="3"
+depth="0.1">
+</a-box>
+<a-box
+mixin="wallcolor"
+position="0 2.75 -6"
+rotation="0 0 0"
+width="1.5"
+height="0.5"
+depth="0.1">
+</a-box>
+<a-box
+color="white"
+position="0 0 -11"
+width="10"
+depth="10"
+height="0.1">
+</a-box>
+<a-box
+color="darkgray"
+position="0 3 -11"
+width="12"
+depth="12"
+height="0.25">
+</a-box>
+<img 
+id="Doctor.01.glb" 
+src="assets\Doctor.01.glb">
+<img
+</a-asset-item
+id="Doctor"
+src="assets\Doctor.glb">
+</a-asset-item>
+<a-entity
+gltf-model="#Doctor"
+position="-1.0 0 -10"
+rotation="0 45 0"
+scale="0.1 0.1 0.1">
+</a-entity>
+                 </a-scene>
+                </body>
+                </html>
