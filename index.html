@@ -7,6 +7,45 @@
           </head>
           <body>
              <a-scene>
+                <a-assets>
+                    <img id="grass-base" src= "assets\Stylized_Grass_001_basecolor.jpg">
+                     <img id="grass-ambient-occlusion" src="assets\Stylized_Grass_001_ambientOcclusion.jpg">
+                     <img id="grass-normal" src="assets\Stylized_Grass_001_normal.jpg">
+                     <img id="sky" src="assets\Sky.jpg">
+                     <img id="tiles-base" src="assets/Tiles_067_basecolor.png">
+                     <img id="tiles-ambient-occlusion" src="assets/Tiles_067_ambientOcclusion.png">
+                     <img id="tiles-normal" src="assets/Tiles_067_normal.png">
+                     <a-asset-item
+                     id="person"
+                     src="assets\person.glb">
+                    </a-asset-item>
+                    <a-asset-item
+                    id="toothbrush"
+                    src="assets\toothbrush.glb">
+                </a-asset-item>
+        <a-asset-item
+        id="mirror"
+        src="assets\mirror.glb">
+    </a-asset-item>
+                </a-assets>
+                <a-entity
+                gltf-model="#person"
+                position="2 0.8 -11"
+                rotation="-85 -90 0"
+                scale="0.4 0.4 0.4">
+            </a-entity>
+            <a-entity
+            gltf-model="#toothbrush"
+            position="4.6 1 -8.5"
+            rotation="0 90 0"
+            scale="0.09 0.09 0.09">
+        </a-entity>
+        <a-entity
+        gltf-model="#mirror"
+        position="4.6 1 -8.5"
+        rotation="0 45 0"
+        scale="0.1 0.08 0.1">
+    </a-entity>
                 <a-box
                 color="grey"
                 position="3 .2 -11"
@@ -29,10 +68,10 @@
     </a-cylinder>
     <a-cone
     color="blue"
-    position="4.2 1.09 -9"
-    rotation="90 0 0"
-    radius-bottom="0.1"
-    height="0.6">
+    position="4.2 1.08 -9.2"
+    rotation="90 -120 0"
+    radius-bottom="0.06"
+    height="0.3">
 </a-cone>
 <a-plane
 color="black"
@@ -43,11 +82,11 @@ height="1">
 </a-plane>
 <a-box
 color="grey"
-position="4.4 0.5 -9"
+position="4.4 0.5 -8.9"
 rotation="0 0 0"
 width="1"
 height="1"
-depth="1">
+depth="2">
 </a-box>
 <a-text
 value="Pediatric
@@ -55,24 +94,32 @@ Dentist"
 color="purple"
 position="1 2 -5.5"
 width="15">
+</a-text>
 <a-box
 color="grey"
-position="3.5 -1.4 -8"
+position="4.4 0.6 -13.5"
 rotation="0 0 0"
 width="1"
 height="1.3"
 depth="1">
 </a-box>
-</a-text>
+
                  <a-plane 
-                 color="forestgreen" 
+                material=
+                "src: #grass-base; 
+                repeat: 500 500;
+                 ambientOcclusionMap: #grass-ambient-occlusion; 
+                 ambientOcclusionTextureRepeat: 500 500;
+                  normalMap: #grass-normal;
+                   normalTextureRepeat: 500 500"
                  position="0 0 0" 
                  rotation="-90 0 0"
                   width="500"
-                  height="500" > 
+                  height="500" 
+                  > 
                 </a-plane>
                  <a-sky
-                  color="lightskyblue" >
+                  src="#sky" >
                  </a-sky>
                  <a-mixin
                  id="wallcolor"
@@ -127,11 +174,17 @@ height="0.5"
 depth="0.1">
 </a-box>
 <a-box
-color="white"
+material= 
+"src: #tiles-base; 
+repeat: 10 10;
+ ambientOcclusionMap: #tiles-ambient-occlusion;
+  ambientOcclusionTextureRepeat: 10 10; 
+  normalMap: #tiles-normal;
+   normalTextureRepeat: 10 10"
 position="0 0 -11"
 width="10"
 depth="10"
-height="0.1">
+height="0.2">
 </a-box>
 <a-box
 color="brown"
