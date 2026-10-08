@@ -27,11 +27,19 @@
         id="mirror"
         src="assets\mirror.glb">
     </a-asset-item>
+    <a-asset-item
+    id="dentistchair"
+    src="assets\dentistchair.glb">
+</a-asset-item>
+<a-asset-item
+id="chair"
+src="assets\chair3.glb">
+</a-asset-itemid>
                 </a-assets>
                 <a-entity
                 gltf-model="#person"
-                position="2 0.8 -11"
-                rotation="-85 -90 0"
+                position="2.7 0.87 -11"
+                rotation="-80 -90 0"
                 scale="0.4 0.4 0.4">
             </a-entity>
             <a-entity
@@ -42,18 +50,22 @@
         </a-entity>
         <a-entity
         gltf-model="#mirror"
-        position="4.6 1 -8.5"
-        rotation="0 45 0"
-        scale="0.1 0.08 0.1">
+        position="4.3 1 -8.9"
+        rotation="0 120 0"
+        scale="0.09 0.08 0.09">
     </a-entity>
-                <a-box
-                color="grey"
-                position="3 .2 -11"
-                rotation="0 0 0"
-                width="4"
-                height="1"
-                depth="2">
-            </a-box>
+    <a-entity
+    gltf-model="#dentistchair"
+    position="3.29 0.69 -11.2"
+    rotation="0 0 0"
+    scale="1.5 1.5 1.5">
+</a-entity>
+<a-entity
+gltf-model="#chair"
+position="2.4 0.5 -13.4"
+rotation="0 45 0"
+scale="1 1 1">
+</a-entity>
             <a-sphere
             color="yellow"
             position="3.5 2.3 -11"
