@@ -15,6 +15,9 @@
                      <img id="tiles-base" src="assets/Tiles_067_basecolor.png">
                      <img id="tiles-ambient-occlusion" src="assets/Tiles_067_ambientOcclusion.png">
                      <img id="tiles-normal" src="assets/Tiles_067_normal.png">
+                     <img id="roof-base" src="assets\Roof_basecolor.jpg">
+                     <img id="roof-ambient-occlusion" src="assets\Roof_ambientOcclusion.jpg">
+                     <img id="roof-normal" src="assets\Roof_normal.jpg">
                      <a-asset-item
                      id="person"
                      src="assets\person.glb">
@@ -199,7 +202,13 @@ depth="10"
 height="0.2">
 </a-box>
 <a-box
-color="brown"
+material= 
+"src: #roof-base; 
+repeat: 10 10; 
+ambientOcclusionMap: #roof-ambient-occlusion;
+ ambientOcclusionTextureRepeat: 10 10; 
+ normalMap: #roof-normal;
+  normalTextureRepeat: 10 10"
 position="0 3 -11"
 width="12"
 depth="12"
